@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.list-tabs {
+    display: flex;
+    list-style-type: none;
+    border: 1px solid black;
+    width: 800px;
+    align-text: center;
+    margin: 0 auto;
+    font-family: "Times New Roman";
+    font-size: 30px;
+}
+
+#firstTab, #secondTab, #lastTab{
+    width: calc(800px / 3);
+    padding-left: 15px;
+    height: 40px;
+    text-align: center;
+}
+
+#firstTab:hover, #secondTab:hover , #lastTab:hover {
+    background: darkslategray;
+    cursor: pointer;
+    color: white;
+}
+
+.text{
+    border: 1px solid black;
+    height: 500px;
+    width: 800px;
+    margin: 0 auto;
+}
+
+#textOne,#textTwo,#textThree {
+    padding: 20px;
+}
+
+#textOne {
+    display: block;
+}
+
+#textTwo {
+    display: none;
+}
+
+#textThree {
+    display: none;
+}
+
