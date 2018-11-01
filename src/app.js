@@ -1,24 +1,15 @@
-document.addEventListener('DOMContentLoaded', clickThree);
-document.addEventListener('DOMContentLoaded', clickTwo);
-document.addEventListener('DOMContentLoaded', clickOne);
+document.addEventListener('DOMContentLoaded', Tab);
 
-function clickOne() {
-  document.getElementById('firstTab').addEventListener('click', clickOne);
-  document.getElementById('textOne').setAttribute('style', 'display:block');
-  document.getElementById('textTwo').setAttribute('style', 'display:none');
-  document.getElementById('textThree').setAttribute('style', 'display:none');
-}
 
-function clickTwo() {
-  document.getElementById('secondTab').addEventListener('click', clickTwo);
-  document.getElementById('textOne').setAttribute('style', 'display:none');
-  document.getElementById('textTwo').setAttribute('style', 'display:block');
-  document.getElementById('textThree').setAttribute('style', 'display:none');
-}
-
-function clickThree() {
-  document.getElementById('lastTab').addEventListener('click', clickThree);
-  document.getElementById('textOne').setAttribute('style', 'display:none');
-  document.getElementById('textTwo').setAttribute('style', 'display:none');
-  document.getElementById('textThree').setAttribute('style', 'display:block');
+function Tab() {
+  let lengthTabs = document.querySelectorAll('.tabs');
+  let lengthContent = document.querySelectorAll('.tab-content');
+  for (let i = 0; i< lengthTabs.length; i++) {
+    lengthTabs[i].addEventListener('click', function() {
+      for (let j = 0; j < lengthTabs.length; j++) {
+        lengthContent[j].classList.remove('active');
+      }
+      lengthContent[i].classList.add('active');
+    });
+  }
 }

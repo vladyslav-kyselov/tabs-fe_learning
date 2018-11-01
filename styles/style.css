@@ -6,7 +6,7 @@
 .list-tabs {
     display: flex;
     list-style-type: none;
-    border: 1px solid black;
+    border: 2px solid black;
     width: 800px;
     align-text: center;
     margin: 0 auto;
@@ -14,39 +14,36 @@
     font-size: 30px;
 }
 
-#firstTab, #secondTab, #lastTab{
+.tabs{
     width: calc(800px / 3);
     padding-left: 15px;
     height: 40px;
     text-align: center;
 }
 
-#firstTab:hover, #secondTab:hover , #lastTab:hover {
+.tabs:hover {
     background: darkslategray;
     cursor: pointer;
     color: white;
 }
 
 .text{
-    border: 1px solid black;
+    border: 2px solid black;
     height: 500px;
     width: 800px;
     margin: 0 auto;
 }
 
-#textOne,#textTwo,#textThree {
+.tab-content {
     padding: 20px;
+    display: none;
+    font-size: 70px;
+    text-align: center;
+    margin-top: 150px;
 }
 
-#textOne {
+.active {
     display: block;
 }
 
-#textTwo {
-    display: none;
-}
-
-#textThree {
-    display: none;
-}
 
