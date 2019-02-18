@@ -1,15 +1,18 @@
 document.addEventListener('DOMContentLoaded', Tab);
 
-
 function Tab() {
-  let tabs = document.querySelectorAll('.tabs');
-  let content = document.querySelectorAll('.tab-content');
-  for (let i = 0; i< tabs.length; i++) {
-    tabs[i].addEventListener('click', function() {
-      for (let j = 0; j < tabs.length; j++) {
-        content[j].classList.remove('active');
-      }
-      content[i].classList.add('active');
+    this.addEventListener('click', function (e) {
+        if (e.target.classList.contains('tabs')) {
+            makeTabActive(e.target);
+        }
     });
-  }
+}
+
+function makeTabActive(event) {
+    let content = document.querySelectorAll('.tab-content');
+    for (let j = 0; j < content.length; j++) {
+        content[j].classList.remove('active');
+    }
+
+    event.classList.add('active'); // но здесь добавляет клас в li , а надо в div. Здесь ступор.
 }
